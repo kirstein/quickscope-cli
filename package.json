@@ -1,0 +1,31 @@
+{
+  "name": "quickscope-cli",
+  "version": "0.0.0",
+  "description": "Cli client for quickscope",
+  "scripts": {
+    "test": "./node_modules/jest-cli/bin/jest.js"
+  },
+  "bin": {
+    "quickscope": "./bin/quickscope.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:/quickscope-cli.git"
+  },
+  "devDependencies": {
+    "jest-cli": "^0.5.0"
+  },
+  "license": "MIT",
+  "config": {
+    "quickscope": {
+      "files": "lib/__tests__/**.js",
+      "cmd": "jest"
+    }
+  },
+  "dependencies": {
+    "cli-spinner": "^0.2.1",
+    "find-project-root": "^1.1.1",
+    "lodash": "^3.10.1",
+    "quickscope": "^0.1.0"
+  }
+}
