@@ -1,6 +1,6 @@
 {
   "name": "quickscope-cli",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Cli client for quickscope",
   "scripts": {
     "test": "./node_modules/jest-cli/bin/jest.js"
