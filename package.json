@@ -13,7 +13,7 @@
     "url": "git@github.com:/quickscope-cli.git"
   },
   "devDependencies": {
-    "jest-cli": "^0.6.0"
+    "jest-cli": "^0.8.2"
   },
   "license": "MIT",
   "config": {
@@ -25,7 +25,7 @@
   "dependencies": {
     "cli-spinner": "^0.2.1",
     "find-project-root": "^1.1.1",
-    "lodash": "^3.10.1",
+    "lodash": "^4.5.1",
     "minimist": "^1.2.0",
     "quickscope": "^0.2.1"
   }
