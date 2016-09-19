@@ -20,6 +20,8 @@ function fetchConfig() {
   return getConfig(cfgFile, require(cfgFile));
 }
 
+console.log('Running quickscope');
+
 let cfg        = fetchConfig();
 let isReady    = false;
 let quickscope = new Quickscope(cfg.files, { cwd: root });
@@ -31,6 +33,7 @@ quickscope.on('ready', function (files) {
 });
 
 quickscope.on('add', function (file) {
+  console.log('added', file);
   if (!isReady) { return; }
   console.log(print.fileChange('Added new test:', file));
 });
@@ -41,7 +44,11 @@ quickscope.on('unlink', function (file) {
 
 quickscope.on('change', function (deps) {
   spinner.stop();
-  runner(cfg.cmd, deps, function () {
+  runner(cfg.cmd, deps, function (err) {
+    if (err) {
+      console.error('Failed to run:', err);
+      return;
+    }
     spinner.start();
   });
 });
