@@ -27,6 +27,6 @@
     "find-project-root": "^1.1.1",
     "lodash": "^4.15.0",
     "minimist": "^1.2.0",
-    "quickscope": "^0.2.1"
+    "quickscope": "^0.3.0"
   }
 }

@@ -33,7 +33,6 @@ quickscope.on('ready', function (files) {
 });
 
 quickscope.on('add', function (file) {
-  console.log('added', file);
   if (!isReady) { return; }
   console.log(print.fileChange('Added new test:', file));
 });
